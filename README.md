@@ -1,4 +1,14 @@
-# Emacs Markdown Mode [![MELPA badge][melpa-badge]][melpa-link] [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link] [![Github Actions Status][github-actions-badge]][github-actions-link] [![Guide to Markdown Mode for Emacs][leanpub-badge]][leanpub-link]
+# You do not want this fork
+
+This is a fork I maintain for my own use.
+
+I'm sorry it's public, Github doesn't allow you to change the visibility setting of a fork for "security reasons".
+
+You don't want it. If Github search brought you here, you want something else.
+
+---
+# 
+Emacs Markdown Mode [![MELPA badge][melpa-badge]][melpa-link] [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link] [![Github Actions Status][github-actions-badge]][github-actions-link] [![Guide to Markdown Mode for Emacs][leanpub-badge]][leanpub-link]
 
   [melpa-link]: https://melpa.org/#/markdown-mode
   [melpa-stable-link]: https://stable.melpa.org/#/markdown-mode
