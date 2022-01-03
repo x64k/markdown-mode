@@ -7788,7 +7788,7 @@ returns nil."
               (if (functionp markdown-open-image-command)
                   (funcall markdown-open-image-command link-file)
                 (process-file markdown-open-image-command nil nil nil link-file))
-            (find-file link-file)))))))
+            (find-file-other-window link-file)))))))
 
 (defun markdown-follow-link-at-point (&optional event)
   "Open the non-wiki link at point or EVENT.
