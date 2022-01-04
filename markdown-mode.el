@@ -8587,6 +8587,13 @@ See also `markdown-display-remote-images'."
         (url-copy-file url dl-path t)
         (puthash url dl-path markdown--remote-image-cache))))
 
+(defun markdown-image-margins (image-width)
+  (cons
+   (let ((window-width (window-body-size nil :pixelwise t)))
+     (if (> image-width window-width) 0
+       (/ (- window-width image-width) 2)))
+   8))
+
 (defun markdown-display-inline-images ()
   "Add inline image overlays to image links in the buffer.
 This can be toggled with `markdown-toggle-inline-images'
@@ -8637,7 +8644,11 @@ or \\[markdown-toggle-inline-images]."
                   (let ((ov (make-overlay start end)))
                     (overlay-put ov 'display image)
                     (overlay-put ov 'face 'default)
-                    (push ov markdown-inline-image-overlays)))))))))))
+                    (push ov markdown-inline-image-overlays)))
+
+                (when image
+                  (let ((image-width (car (image-size image t))))
+                    (setf (image-property image :margin) (markdown-image-margins image-width))))))))))))
 
 (defun markdown-toggle-inline-images ()
   "Toggle inline image overlays in the buffer."
